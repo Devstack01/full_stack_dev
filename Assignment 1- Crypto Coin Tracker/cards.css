@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+
+}
+body{
+    align-items: center;
+    background-color: aliceblue;
+    margin: 30px;
+    display: flex;
+    justify-self: center;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+}
+h1 {
+    text-align: center;
+    margin: 5px;
+}
+.search-bar{
+    display: flex;
+    padding: 20px 12px;
+    margin: 8px 0;
+}
+.dropdown-menu select{
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: white;
+    margin: 7px;
+    border-radius: 7px;
+    border: 1px solid grey;
+}
+#dropdown{
+    height: 30px;
+    margin: 7px;
+    border-radius: 7px;
+}
+.searchBox input{
+    width: 210px;
+    height: 30px;
+    margin: 7px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+.coin-menu{
+    align-items: center;
+    display: flex;
+    margin: 8px;
+    padding: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.coin-menu div{
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+}
+.coin-menu img{
+    align-content: center;
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.coin-menu p{
+    text-align: center;
+    margin: 5px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.coin-menu h3{
+    text-align: center;
+
+}
+
+@media(max-width:780px){
+    .coin-menu{
+       display: flex;
+       margin: 10px;
+       padding: 10px;
+       position: relative;
+       gap: 20px;
+    }
+    
+}
+
+@media(max-width: 480px){
+    .search-bar{
+        width: 50%;
+        flex-direction: column;
+        padding: 5px;
+        margin: 5px;
+        gap: 10px;
+        position: relative;
+    }
+    .coin-menu{
+        display: inline-block;
+        margin: 3px;
+        padding: 3px;
+        position: absolute;
+        top: 26%;
+        left: 28.5%;
+
+        
+    }
+    .coin-menu div{
+        font-size: 14px;
+        flex-flow: column wrap;
+    }
+}
+
+
