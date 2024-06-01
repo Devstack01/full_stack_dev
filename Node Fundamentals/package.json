@@ -1,0 +1,11 @@
+{
+  "name": "node-fundamentals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
