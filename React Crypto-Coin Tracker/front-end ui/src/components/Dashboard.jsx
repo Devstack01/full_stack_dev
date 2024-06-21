@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from "react"; 
+import { coinMarketCapApiKey, coinMarketCapApiUrl } from "../common/constants";
 import CryptoSearchPanel from "./CryptoSearchPanel";
 import CryptoCards from "./CryptoCards";
 
@@ -142,8 +143,7 @@ import CryptoCards from "./CryptoCards";
 ]; */
  
 // const bitCoin = cryptoCoins[0]; 
-const coinMarketCapApiKey= '006fee31-74ad-4a3c-b45e-30743544fcb6';
-const coinMarketCapApiUrl= 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
+
 const Dashboard = () => {
     const[coinData, setCoinData] = useState([]);
     const[filterData, setFilterData] = useState([]);
@@ -172,9 +172,9 @@ const Dashboard = () => {
     }
     useEffect(() => {
         console.log(`component mounted...`);
-        fetchData();
+        fetchCoinData();
     },[])
-const fetchData = async() =>{
+const fetchCoinData = async() =>{
         console.log(`fetach data...`);
         try {
             const response = await fetch(coinMarketCapApiUrl,{
@@ -221,7 +221,6 @@ const fetchData = async() =>{
                    return <CryptoCards {...currentCoin} />
                 })
             }
-                
             </div>       
             </div>
      </>

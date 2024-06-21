@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const {connectToDb} = require ('./Database/connectionManager.js');
 
 const app = new express();
+
 const watchListModule = require('./modules/watchListModule');
 const port = 3000;
+app.use(cors());
+
 app.get('/watchlist', async(req, res) => {
 
     const data = await watchListModule.getItems();
@@ -31,7 +35,7 @@ connectToDb().then(() => {
     console.log(`MongoDB connection completed...`)
 
     app.listen(port, () => {
-        console.log(`Express Server started on ${port}`);
+        console.log(`CORS-enabled Express Server started on ${port}`);
         
     })
 })
